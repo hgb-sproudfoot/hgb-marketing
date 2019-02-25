@@ -32,10 +32,13 @@ function itinAnim() {
 
 
 timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
+// timelineMain.from('')
 timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, 2);
 itinAnim();
-timelineMain.from('.slack', 1, { opacity: 0, ease: Power1.easeIn, y: 400 });
-timelineMain.to('.slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
+timelineMain.from('#slack', 1, { opacity: 0, ease: Power1.easeIn, y: 400 });
+timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
+timelineMain.from('#email', 0.5, {opacity: 0, ease: Power1.easeIn, y: 300} );
+timelineMain.to('#email', 1, {opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
 
 
 document.getElementById('animStart').addEventListener('click', function () {
