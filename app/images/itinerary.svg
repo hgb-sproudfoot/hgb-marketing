@@ -96,8 +96,8 @@
                                 <path d="M21.427209,20.2310749 C18.3916334,18.8978549 15.0211939,17.2417506 14.7384064,16.2102626 L14.7384064,15.1283823 C15.3681687,14.3961378 15.8647121,13.3746039 16.1583994,12.1788742 C16.8650653,11.6152264 17.0406722,10.4530916 16.4557198,9.6362377 L16.4557198,7.21242763 C16.4557198,4.71209582 15.2301055,3 12.4288742,3 C9.69970228,3 8.40081748,4.71209582 8.40081748,7.21242763 L8.40081748,9.63685983 C7.81647071,10.4530916 7.99328859,11.6146042 8.69813796,12.1788742 C8.9918252,13.3746039 9.48897411,14.3961378 10.1187364,15.1283823 L10.1187364,16.2102626 C9.83655447,17.2405063 6.46550941,18.8966106 3.4299339,20.2310749 C3.17136802,20.3461685 3,20.6317252 3,20.9508768 L3,23.6583772 C3,24.0832905 3.2991371,24.4285714 3.66791139,24.4285714 L21.1892315,24.4285714 C21.5580058,24.4285714 21.8571429,24.0832905 21.8571429,23.6583772 L21.8571429,20.9508768 C21.8571429,20.6317252 21.6857748,20.3449243 21.427209,20.2310749 L21.427209,20.2310749 Z" id="Stroke-50"></path>
                             </g>
                         </g>
-                        <rect id="Rectangle" fill="#D8D8D8" x="47" y="12" width="101" height="6" rx="3"></rect>
-                        <rect id="Rectangle-Copy-19" fill="#D8D8D8" x="47" y="29" width="60" height="6" rx="3"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle" fill="#D8D8D8" x="47" y="12" width="101" height="6" rx="3"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-19" fill="#D8D8D8" x="47" y="29" width="60" height="6" rx="3"></rect>
                     </g>
                     <g id="Rectangle-Copy-3">
                         <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#itinerary-path-7"></use>
@@ -121,15 +121,15 @@
                             </mask>
                             <use id="Mask" fill="#CCCCCC" xlink:href="#itinerary-path-12"></use>
                         </g>
-                        <rect id="Rectangle-Copy-43" fill="#666666" x="45" y="10" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-78" fill="#666666" x="45" y="37" width="55" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-76" fill="#CCCCCC" x="45" y="22" width="42" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-80" fill="#CCCCCC" x="45" y="49" width="63" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-75" fill="#666666" x="125" y="10" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-82" fill="#666666" x="274" y="25" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-79" fill="#666666" x="125" y="37" width="47" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-77" fill="#CCCCCC" x="125" y="22" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-81" fill="#CCCCCC" x="211" y="10" width="97" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-43" fill="#666666" x="45" y="10" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-78" fill="#666666" x="45" y="37" width="55" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-76" fill="#CCCCCC" x="45" y="22" width="42" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-80" fill="#CCCCCC" x="45" y="49" width="63" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-75" fill="#666666" x="125" y="10" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-82" fill="#666666" x="274" y="25" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-79" fill="#666666" x="125" y="37" width="47" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-77" fill="#CCCCCC" x="125" y="22" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-81" fill="#CCCCCC" x="211" y="10" width="97" height="4" rx="2"></rect>
                     </g>
                     <g id="Group-5-Copy" transform="translate(6.000000, 276.000000)">
                         <g id="Rectangle">
@@ -148,15 +148,15 @@
                             </mask>
                             <use id="Mask" fill="#CCCCCC" xlink:href="#itinerary-path-17"></use>
                         </g>
-                        <rect id="Rectangle-Copy-43" fill="#666666" x="45" y="10" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-78" fill="#666666" x="45" y="37" width="55" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-76" fill="#CCCCCC" x="45" y="22" width="42" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-80" fill="#CCCCCC" x="45" y="49" width="63" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-75" fill="#666666" x="125" y="10" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-82" fill="#666666" x="274" y="25" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-79" fill="#666666" x="125" y="37" width="47" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-77" fill="#CCCCCC" x="125" y="22" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-81" fill="#CCCCCC" x="211" y="10" width="97" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-43" fill="#666666" x="45" y="10" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-78" fill="#666666" x="45" y="37" width="55" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-76" fill="#CCCCCC" x="45" y="22" width="42" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-80" fill="#CCCCCC" x="45" y="49" width="63" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-75" fill="#666666" x="125" y="10" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-82" fill="#666666" x="274" y="25" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-79" fill="#666666" x="125" y="37" width="47" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-77" fill="#CCCCCC" x="125" y="22" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-81" fill="#CCCCCC" x="211" y="10" width="97" height="4" rx="2"></rect>
                     </g>
                     <g id="Group-4" transform="translate(6.000000, 173.000000)">
                         <g id="Rectangle">
@@ -179,13 +179,13 @@
                                 </g>
                             </g>
                         </g>
-                        <rect id="Rectangle-Copy-83" fill="#666666" x="45" y="15" width="126" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-84" fill="#CCCCCC" x="45" y="29" width="149" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-85" fill="#CCCCCC" x="45" y="43" width="149" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-86" fill="#666666" x="45" y="56" width="48" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-87" fill="#666666" x="124" y="56" width="48" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-88" fill="#666666" x="274" y="55" width="34" height="4" rx="2"></rect>
-                        <rect id="Rectangle-Copy-89" fill="#CCCCCC" x="211" y="14.5" width="97" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-83" fill="#666666" x="45" y="15" width="126" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-84" fill="#CCCCCC" x="45" y="29" width="149" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-85" fill="#CCCCCC" x="45" y="43" width="149" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-86" fill="#666666" x="45" y="56" width="48" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-87" fill="#666666" x="124" y="56" width="48" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-88" fill="#666666" x="274" y="55" width="34" height="4" rx="2"></rect>
+                        <rect class="itinerary-mock-text" id="Rectangle-Copy-89" fill="#CCCCCC" x="211" y="14.5" width="97" height="4" rx="2"></rect>
                     </g>
                     <g id="Rectangle">
                         <use fill="black" fill-opacity="1" filter="url(#filter-23)" xlink:href="#itinerary-path-22"></use>
