@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function(){
     var pathEls = document.querySelectorAll('svg .circuit-wire path');
     pathEls.forEach((path, index) => {
@@ -13,4 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
             autoplay: true
         });
     });
+})
+
+var timelineMain = new TimelineMax({
+
+});
+
+timelineMain.to('#iPhone', 1, {opacity: 1, ease: Power1.easeOut, y: -700 });
+timelineMain.to('#iPhone', 1, {opacity: 0, ease: Power1.easeOut, x: 500}, 2);
+
+document.getElementById('animStart').addEventListener('click', function() {
+    timelineMain.restart()
 })
