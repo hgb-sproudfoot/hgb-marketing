@@ -5,6 +5,30 @@
   left: 50px;
 }
 
+.itin-container {
+  position: absolute;
+  left: 800px;
+  bottom: -100px;
+
+    img {
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+
+    #date-card {
+      position: relative;
+      right: 5px;
+    }
+    
+    .special {
+      position: absolute;
+      bottom: 35px !important;
+    }
+    #book-btn {
+      margin: 25px 25px 25px 25px;
+    }
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;

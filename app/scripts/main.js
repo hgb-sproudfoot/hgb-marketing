@@ -21,8 +21,8 @@ var timelineMain = new TimelineMax({
 
 });
 
-timelineMain.to('#iPhone', 1, {opacity: 1, ease: Power1.easeOut, y: -700 });
-timelineMain.to('#iPhone', 1, {opacity: 0, ease: Power1.easeOut, x: 500}, 2);
+timelineMain.to('#iPhone', .7, {opacity: 1, ease: Power1.easeOut, y: -750 });
+timelineMain.to('#iPhone', 1, {opacity: 0, ease: Power1.easeOut, x: 700}, 2);
 
 document.getElementById('animStart').addEventListener('click', function() {
     timelineMain.restart()
