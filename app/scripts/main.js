@@ -23,6 +23,13 @@ var timelineMain = new TimelineMax({
 
 timelineMain.to('#iPhone', .7, {opacity: 1, ease: Power1.easeOut, y: -750 });
 timelineMain.to('#iPhone', 1, {opacity: 0, ease: Power1.easeOut, x: 700}, 2);
+timelineMain.from('#date-card', .5, {opacity: 0, ease: Power1.easeIn, x: -300}, "itinAnim");
+timelineMain.from('#pax-card, #flight-card, #hotel-card', 1, {opacity: 0 }, "itinAnim");
+timelineMain.from('#book-btn', .5, {opacity: 0, ease: Power1.easeIn, y: 100}, "itinAnim");
+timelineMain.staggerTo('#pax-card, #flight-card, #hotel-card', 1, {opacity: 0, ease: Power1.easeOut, x: 300}, .05, "itinAnim+=2");
+timelineMain.to('#date-card', 1, {opacity: 0}, "itinAnim+=2");
+timelineMain.to('#book-btn', 1, {opacity: 0, ease: Power1.easeOut, y: 300}, "itinAnim+=2");
+
 
 document.getElementById('animStart').addEventListener('click', function() {
     timelineMain.restart()
