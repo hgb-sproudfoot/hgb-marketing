@@ -1,42 +1,36 @@
 .animation-banner {
-  max-height: 750px;
+  max-height: 800px;
 }
 #iPhone {
   position: relative;
   top: 800px;
+  left: 50px;
   opacity: 0;
-  right: 550px;
 }
 
-.itinerary {
+#itinerary {
   position: relative;
   float: right;
   bottom: 600px;
   right: 150px;
-
-    // img {
-    //   margin-top: 7px;
-    //   margin-bottom: 7px;
-    // }
-
-    // #date-card {
-    //   position: relative;
-    //   right: 5px;
-    // }
-    
-    // .special {
-    //   position: absolute;
-    //   bottom: 35px !important;
-    // }
-    // #book-btn {
-    //   margin: 25px 25px 25px 25px;
-    // }
 }
 
-.slack {
+#itinerary1 {
   position: relative;
-  float: left;
-  top: 250px;
+  float: right;
+  bottom: 985px;
+  left: 180px;
+}
+
+#slack {
+  position: relative;
+  bottom: 500px;
+}
+
+#email {
+  position: relative;
+  top: 100px;
+  right: 200px;
 }
 
 
@@ -72,6 +66,12 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
+}
+
+.animation-banner {
+  background: rgba(0, 0, 255, 0.1); 
+  position: relative;
+  overflow: hidden;
 }
 
 /* Custom page footer */
