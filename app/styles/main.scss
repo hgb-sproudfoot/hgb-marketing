@@ -64,6 +64,12 @@ body {
   line-height: 3rem;
 }
 
+.animation-banner {
+  background: rgba(0, 0, 255, 0.1); 
+  position: relative;
+  overflow: hidden;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 1.5rem;
