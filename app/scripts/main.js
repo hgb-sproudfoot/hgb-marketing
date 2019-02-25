@@ -1,6 +1,6 @@
 
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     var pathEls = document.querySelectorAll('svg .circuit-wire path');
     pathEls.forEach((path, index) => {
         var offset = anime.setDashoffset(path);
@@ -21,16 +21,23 @@ var timelineMain = new TimelineMax({
 
 });
 
-timelineMain.to('#iPhone', .7, {opacity: 1, ease: Power1.easeOut, y: -750 });
-timelineMain.to('#iPhone', 1, {opacity: 0, ease: Power1.easeOut, x: 700}, 2);
-timelineMain.from('#date-card', .5, {opacity: 0, ease: Power1.easeIn, x: -300}, "itinAnim");
-timelineMain.from('#pax-card, #flight-card, #hotel-card', 1, {opacity: 0 }, "itinAnim");
-timelineMain.from('#book-btn', .5, {opacity: 0, ease: Power1.easeIn, y: 100}, "itinAnim");
-timelineMain.staggerTo('#pax-card, #flight-card, #hotel-card', 1, {opacity: 0, ease: Power1.easeOut, x: 300}, .05, "itinAnim+=2");
-timelineMain.to('#date-card', 1, {opacity: 0}, "itinAnim+=2");
-timelineMain.to('#book-btn', 1, {opacity: 0, ease: Power1.easeOut, y: 300}, "itinAnim+=2");
+function itinAnim() {
+    timelineMain.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, #Date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, "itinAnim");
+    timelineMain.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, "itinAnim");
+    timelineMain.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, "itinAnim");
+    timelineMain.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, "itinAnim+=2");
+    timelineMain.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, #Date', 1, { opacity: 0 }, "itinAnim+=2");
+    timelineMain.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, "itinAnim+=2");
+};
 
 
-document.getElementById('animStart').addEventListener('click', function() {
+timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
+timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, 2);
+itinAnim();
+timelineMain.from('.slack', 1, { opacity: 0, ease: Power1.easeIn, y: 400 });
+timelineMain.to('.slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
+
+
+document.getElementById('animStart').addEventListener('click', function () {
     timelineMain.restart()
 })

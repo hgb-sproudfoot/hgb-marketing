@@ -1,34 +1,44 @@
+.animation-banner {
+  max-height: 750px;
+}
 #iPhone {
   position: relative;
   top: 800px;
   opacity: 0;
-  left: 50px;
+  right: 550px;
 }
 
-.itin-container {
-  position: absolute;
-  left: 800px;
-  right: 200px;
-  bottom: -100px;
+.itinerary {
+  position: relative;
+  float: right;
+  bottom: 600px;
+  right: 150px;
 
-    img {
-      margin-top: 7px;
-      margin-bottom: 7px;
-    }
+    // img {
+    //   margin-top: 7px;
+    //   margin-bottom: 7px;
+    // }
 
-    #date-card {
-      position: relative;
-      right: 5px;
-    }
+    // #date-card {
+    //   position: relative;
+    //   right: 5px;
+    // }
     
-    .special {
-      position: absolute;
-      bottom: 35px !important;
-    }
-    #book-btn {
-      margin: 25px 25px 25px 25px;
-    }
+    // .special {
+    //   position: absolute;
+    //   bottom: 35px !important;
+    // }
+    // #book-btn {
+    //   margin: 25px 25px 25px 25px;
+    // }
 }
+
+.slack {
+  position: relative;
+  float: left;
+  top: 250px;
+}
+
 
 .browserupgrade {
   margin: 0.2em 0;
