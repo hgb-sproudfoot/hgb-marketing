@@ -41,25 +41,25 @@
                     <path d="M134.209402,23.9452055 L182.638156,23.9452055" id="Channel-Date" stroke="#000000" stroke-width="5" stroke-linecap="round"></path>
                 </g>
                 <g xmlns="http://www.w3.org/2000/svg" id="Avatar-1.1" transform="translate(130.000000, 35.793498)">
-                    <rect fill="url(#linearGradient-2)" x="0" y="0.206501832" width="15" height="15"/>
-                    <path d="M20.2037037,3.20650183 L30.8119384,3.20650183" id="Avatar-Name-1.1" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M36.2142857,3.20650183 L50.7857143,3.20650183" id="Avatar-Deets-1.1" stroke="#CCCCCC" stroke-width="5" stroke-linecap="round"/>                    
-                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="10" width="92" height="5" rx="3"/>                    
-                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="23" width="290" height="5" rx="3"/>                    
-                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="35" width="290" height="5" rx="3"/>                
+                    <rect class="slack-mock-text" fill="url(#linearGradient-2)" x="0" y="0.206501832" width="15" height="15"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#000000" x="18" y="0" width="15" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="35" y="0" width="20" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="10" width="92" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="23" width="290" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="35" width="290" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="47" width="87" height="5" rx="3"/>
                 </g>
                 <g xmlns="http://www.w3.org/2000/svg" id="Avatar-2" transform="translate(130.000000, 115.000000)">
-                    <rect fill="url(#linearGradient-3)" x="0" y="0" width="15" height="15"/>
-                    <path d="M20.2037037,3 L30.8119384,3" id="Avatar-Name-2" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M36.2142857,3 L50.7857143,3" id="Avatar-Deets-2" stroke="#CCCCCC" stroke-width="5" stroke-linecap="round"/>
+                    <rect class="slack-mock-text" fill="url(#linearGradient-3)" x="0" y="0" width="15" height="15"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#000000" x="18" y="0" width="15" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="35" y="0" width="20" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="8" width="92" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="22" width="290" height="5" rx="3"/>
                 </g>
                 <g xmlns="http://www.w3.org/2000/svg" id="Avatar-1.2" transform="translate(130.000000, 169.000000)">
-                    <rect fill="url(#linearGradient-2)" x="0" y="0" width="15" height="15"/>
-                    <path d="M20.2037037,4 L30.8119384,4" id="Avatar-Name-1.2" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M36.2142857,4 L50.7857143,4" id="Avatar-Deets-1.2" stroke="#CCCCCC" stroke-width="5" stroke-linecap="round"/>
+                    <rect class="slack-mock-text" fill="url(#linearGradient-2)" x="0" y="0" width="15" height="15"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#000000" x="18" y="0" width="15" height="5" rx="3"/>
+                    <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="35" y="0" width="20" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="9" width="92" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="23" width="290" height="5" rx="3"/>
                     <rect xmlns="http://www.w3.org/2000/svg" class="slack-mock-text" fill="#CCCCCC" x="18" y="35" width="130" height="5" rx="3"/>
