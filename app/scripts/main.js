@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
     var pathEls = document.querySelectorAll('svg .circuit-wire path');
     pathEls.forEach((path, index) => {
@@ -17,54 +18,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 })
 
+
 window.onload = startAnim();
 
 function startAnim() {
-    var timelineMain = new TimelineMax({
-        repeat: -1
-    });
-    
-    var itinTimeLine = new TimelineMax({
-        delay: 4.5, repeat: -1, repeatDelay: 4.5
-    });
 
-        
-    function itinAnim() {
-        itinTimeLine.from('.itinerary-mock-text', 0.2, {width: 0, ease: Power1.easeIn}, "itinAnim")
-        itinTimeLine.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, "itinAnim");
-        itinTimeLine.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, "itinAnim");
-        itinTimeLine.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, "itinAnim");
-        itinTimeLine.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, "itinAnim+=2");
-        itinTimeLine.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, "itinAnim+=2");
-        itinTimeLine.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, "itinAnim+=2");
+
+    var masterTimeline = new TimelineMax({onComplete:function() {
+        masterTimeline.restart();
+        itinTimeLine.restart(true);
     }
 
+    });
 
-    timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
-    timelineMain.staggerFrom('.phone-mock-text', 0.6, { opacity: 0, width: 0, ease: Power1.easeIn}, 0.05)
-    timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=1.5");
-    itinAnim();
-    timelineMain.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=4.5");
-    timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1.8");
-    itinTimeLine.restart(true);
-    timelineMain.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=4");
-    timelineMain.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn}, 0.1);
-    timelineMain.staggerFrom('.email-mock-text', 0.15, {opacity: 0, width: 0, ease: Power1.easeIn}, 0.03);
-    timelineMain.from('#send-btn', 0.2, {opacity: 0, ease: Power1.easeIn});
-    timelineMain.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
-    itinTimeLine.restart(true);
-    timelineMain.to("#quinn-delay-hack", 1.25, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
+    var itinTimeLine = new TimelineMax({ // length: 3s
+        delay: 4, repeatDelay: 4, repeat: 3
+    });
+
+
+    var itinAnim =
+    itinTimeLine.from('.itinerary-mock-text', 0.2, { width: 0, ease: Power1.easeIn }, "itinAnim")
+    itinTimeLine.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, "itinAnim");
+    itinTimeLine.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, "itinAnim");
+    itinTimeLine.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, "itinAnim");
+    itinTimeLine.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, "itinAnim+=2");
+    itinTimeLine.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, "itinAnim+=2");
+    itinTimeLine.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, "itinAnim+=2");
+    
+
+    masterTimeline.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
+    masterTimeline.staggerFrom('.phone-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.05)
+    masterTimeline.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=1");
+    itinAnim.play();
+    masterTimeline.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=3.5");
+    masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1.8");
+    itinTimeLine.repeat();
+    masterTimeline.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=3.5");
+    masterTimeline.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn }, 0.1);
+    masterTimeline.staggerFrom('.email-mock-text', 0.15, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.03);
+    masterTimeline.from('#send-btn', 0.2, { opacity: 0, ease: Power1.easeIn });
+    masterTimeline.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
+    itinTimeLine.repeat()
+    masterTimeline.to('#quinn-delay-hack', 4, {opacity: 0, ease: Power1.easeOut});
+
 
 
     document.getElementById('animPause').addEventListener('click', function () {
-        timelineMain.pause();
-        itinTimeLine.pause();
+        masterTimeline.pause();
+        itinTimeLine.pause(); 
     });
 
     document.getElementById('animResume').addEventListener('click', function () {
-        timelineMain.resume();
+        masterTimeline.resume();
         itinTimeLine.resume();
     });
- 
-
 }
