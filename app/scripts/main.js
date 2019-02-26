@@ -59,7 +59,7 @@ function startAnim() {
     masterTimeline.staggerFrom('.email-mock-text', 0.15, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.03);
     masterTimeline.from('#send-btn', 0.2, { opacity: 0, ease: Power1.easeIn });
     masterTimeline.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
-    itinTimeLine.repeat()
+    itinTimeLine.repeat();
     masterTimeline.to('#quinn-delay-hack', 4, {opacity: 0, ease: Power1.easeOut});
 
 
