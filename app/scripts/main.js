@@ -30,7 +30,7 @@ function startAnim() {
 
         
     function itinAnim() {
-        itinTimeLine.from('.itinerary-mock-text', 0.4, {width: 0, opacity: 0, ease: Power1.easeIn}, "itinAnim")
+        itinTimeLine.from('.itinerary-mock-text', 0.2, {width: 0, ease: Power1.easeIn}, "itinAnim")
         itinTimeLine.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, "itinAnim");
         itinTimeLine.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, "itinAnim");
         itinTimeLine.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, "itinAnim");
@@ -39,29 +39,18 @@ function startAnim() {
         itinTimeLine.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, "itinAnim+=2");
     }
 
-    function emailAnim() {
-        timelineMain.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=4");
-        timelineMain.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn}, 0.1);
-        timelineMain.staggerFrom('.email-mock-text, #send-btn', 0.15, {opacity: 0, width: 0, ease: Power1.easeIn}, 0.03);
-        timelineMain.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
-    }
 
-    function slackAnim() {
-        timelineMain.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=4");
-        timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
-    }
-
-    function iPhoneAnim() {
-        timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
-        timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=2");
-    }
-
-    // MAIN ANIMATION FUNCTION
-    iPhoneAnim();
+    timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
+    timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=2");
     itinAnim();
-    slackAnim();
+    timelineMain.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=4");
+    timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
     itinTimeLine.restart(true);
-    emailAnim();
+    timelineMain.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=4");
+    timelineMain.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn}, 0.1);
+    timelineMain.staggerFrom('.email-mock-text', 0.15, {opacity: 0, width: 0, ease: Power1.easeIn}, 0.03);
+    timelineMain.from('#send-btn', 0.2, {opacity: 0, ease: Power1.easeIn});
+    timelineMain.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
     itinTimeLine.restart(true);
     timelineMain.to("#quinn-delay-hack", 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=3");
 
