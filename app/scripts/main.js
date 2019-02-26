@@ -25,7 +25,7 @@ function startAnim() {
     });
     
     var itinTimeLine = new TimelineMax({
-        delay: 4, repeat: -1, repeatDelay: 4.5
+        delay: 4.5, repeat: -1, repeatDelay: 4.5
     });
 
         
@@ -41,10 +41,11 @@ function startAnim() {
 
 
     timelineMain.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
-    timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=2");
+    timelineMain.staggerFrom('.phone-mock-text', 0.6, { opacity: 0, width: 0, ease: Power1.easeIn}, 0.05)
+    timelineMain.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=1.5");
     itinAnim();
-    timelineMain.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=4");
-    timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
+    timelineMain.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=4.5");
+    timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1.8");
     itinTimeLine.restart(true);
     timelineMain.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=4");
     timelineMain.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn}, 0.1);
@@ -52,7 +53,7 @@ function startAnim() {
     timelineMain.from('#send-btn', 0.2, {opacity: 0, ease: Power1.easeIn});
     timelineMain.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1");
     itinTimeLine.restart(true);
-    timelineMain.to("#quinn-delay-hack", 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=3");
+    timelineMain.to("#quinn-delay-hack", 1.25, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
 
 
     document.getElementById('animPause').addEventListener('click', function () {
