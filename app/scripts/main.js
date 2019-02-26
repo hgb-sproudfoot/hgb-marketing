@@ -47,11 +47,12 @@ function startAnim() {
     
 
     masterTimeline.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
-    masterTimeline.staggerFrom('.phone-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.05)
+    masterTimeline.staggerFrom('.phone-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.05);
     masterTimeline.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, "+=1");
     itinAnim.play();
     masterTimeline.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, "+=3.5");
-    masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1.8");
+    masterTimeline.staggerFrom('.slack-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeOut }, 0.05);    
+    masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=1.3");  
     itinTimeLine.repeat();
     masterTimeline.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=3.5");
     masterTimeline.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn }, 0.1);
