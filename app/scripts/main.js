@@ -46,6 +46,7 @@ function startAnim() {
     timelineMain.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
     itinTimeLine.restart(true);
     timelineMain.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, "+=4");
+    timelineMain.staggerFrom('.email-mock-text', 2, {opacity: 0, width: 0, ease: Power1.easeIn}, "-=2");
     timelineMain.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=2");
     itinTimeLine.restart(true);
     timelineMain.to("#quinn-delay-hack", 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "+=3");
@@ -59,7 +60,7 @@ function startAnim() {
     document.getElementById('animResume').addEventListener('click', function () {
         timelineMain.resume();
         itinTimeLine.resume();
-    })
+    });
  
 
 }
