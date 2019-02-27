@@ -26,30 +26,27 @@ function startAnim() {
 
     const masterTimeline = new TimelineMax({onComplete:function() {
         masterTimeline.restart();
-        itinTimeLine.restart(true);
+        itinTimeline.restart(true);
     }
 
     });
 
-    const itinTimeLine = new TimelineMax({ // length: 3s
+    const itinTimeline = new TimelineMax({ // length: 3s
         delay: 4, repeatDelay: 4, repeat:2
     });
 
-
-    var itinAnim =
-    itinTimeLine.from('.itinerary-mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itinAnim')
-    itinTimeLine.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itinAnim');
-    itinTimeLine.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, 'itinAnim');
-    itinTimeLine.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, 'itinAnim');
-    itinTimeLine.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2');
-    itinTimeLine.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, 'itinAnim+=2');
-    itinTimeLine.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, 'itinAnim+=2');
+    itinTimeline.from('.itinerary-mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itinAnim')
+    itinTimeline.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itinAnim');
+    itinTimeline.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, 'itinAnim');
+    itinTimeline.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, 'itinAnim');
+    itinTimeline.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2');
+    itinTimeline.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, 'itinAnim+=2');
+    itinTimeline.to('#Rectangle-2, #BookNow', 1, { opacity: 0, ease: Power1.easeOut, y: 300 }, 'itinAnim+=2');
     
 
     masterTimeline.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
     masterTimeline.staggerFrom('.phone-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.05);
     masterTimeline.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, '+=1');
-    itinAnim.play();
     masterTimeline.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, '+=3.5');
     masterTimeline.staggerFrom('.slack-mock-text', 0.3, { opacity: 0, width: 0, ease: Power1.easeOut }, 0.02);    
     masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, '+=1.3');  
@@ -64,11 +61,12 @@ function startAnim() {
 
     document.getElementById('animPause').addEventListener('click', function () {
         masterTimeline.pause();
-        itinTimeLine.pause(); 
+        itinTimeline.pause(); 
     });
 
     document.getElementById('animResume').addEventListener('click', function () {
         masterTimeline.resume();
-        itinTimeLine.resume();
+        itinTimeline.resume();
     });
+
 }
