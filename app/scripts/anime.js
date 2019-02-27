@@ -372,7 +372,7 @@ function mergeObjects(o1, o2) {
 
 function rgbToRgba(rgbValue) {
   var rgb = /rgb\((\d+,\s*[\d]+,\s*[\d]+)\)/g.exec(rgbValue);
-  return rgb ? ("rgba(" + (rgb[1]) + ",1)") : rgbValue;
+  return rgb ? ('rgba(' + (rgb[1]) + ',1)') : rgbValue;
 }
 
 function hexToRgba(hexValue) {
@@ -382,7 +382,7 @@ function hexToRgba(hexValue) {
   var r = parseInt(rgb[1], 16);
   var g = parseInt(rgb[2], 16);
   var b = parseInt(rgb[3], 16);
-  return ("rgba(" + r + "," + g + "," + b + ",1)");
+  return ('rgba(' + r + ',' + g + ',' + b + ',1)');
 }
 
 function hslToRgba(hslValue) {
@@ -409,7 +409,7 @@ function hslToRgba(hslValue) {
     g = hue2rgb(p, q, h);
     b = hue2rgb(p, q, h - 1/3);
   }
-  return ("rgba(" + (r * 255) + "," + (g * 255) + "," + (b * 255) + "," + a + ")");
+  return ('rgba(' + (r * 255) + ',' + (g * 255) + ',' + (b * 255) + ',' + a + ')');
 }
 
 function colorToRgb(val) {
@@ -786,7 +786,7 @@ var setProgressValue = {
     transforms.list.set(p, v);
     if (p === transforms.last || manual) {
       var str = '';
-      transforms.list.forEach(function (value, prop) { str += prop + "(" + value + ") "; });
+      transforms.list.forEach(function (value, prop) { str += prop + '(' + value + ') '; });
       t.style.transform = str;
     }
   }
