@@ -24,14 +24,14 @@ window.onload = startAnim();
 function startAnim() {
 
 
-    var masterTimeline = new TimelineMax({onComplete:function() {
+    const masterTimeline = new TimelineMax({onComplete:function() {
         masterTimeline.restart();
         itinTimeLine.restart(true);
     }
 
     });
 
-    var itinTimeLine = new TimelineMax({ // length: 3s
+    const itinTimeLine = new TimelineMax({ // length: 3s
         delay: 4, repeatDelay: 4, repeat:2
     });
 
