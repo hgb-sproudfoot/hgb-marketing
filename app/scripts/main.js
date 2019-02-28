@@ -40,7 +40,7 @@ function startAnim() {
     itinTimeline.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, 'itinAnim');
     itinTimeline.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, 'itinAnim');
     itinTimeline.from('#Rectangle-2', 0.25, { filter: "url(#dropshadow)"});
-    itinTimeline.to('#Rectangle-2', 0.1, {filter: "url(#inset-shadow)", fill: "#3C6F85" , ease: Power1.easeIn});
+    itinTimeline.to('#Rectangle-2', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
     itinTimeline.to('#Rectangle-2', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
     itinTimeline.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2.2');
     itinTimeline.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, 'itinAnim+=2.2');
