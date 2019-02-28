@@ -25,9 +25,10 @@
   left: 0;
 }
 
-#itinerary {
+#itinerary-1,
+#itinerary-2,
+#itinerary-3 {
   position: absolute;
-  float: right;
   bottom: 100px;
   right: 0;
   overflow: visible;

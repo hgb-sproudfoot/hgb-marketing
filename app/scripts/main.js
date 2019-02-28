@@ -24,41 +24,64 @@ window.onload = startAnim();
 function startAnim() {
 
 
-    const masterTimeline = new TimelineMax({onComplete:function() {
-        masterTimeline.restart();
-        itinTimeline.restart(true);
-    }
-
+    const masterTimeline = new TimelineMax({
+        onComplete:function() {
+            masterTimeline.restart();
+        }
     });
-
-    const itinTimeline = new TimelineMax({ // length: 3s
-        delay: 4, repeatDelay: 4, repeat:2
-    });
-
-    itinTimeline.from('.itinerary-mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itinAnim')
-    itinTimeline.from('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itinAnim');
-    itinTimeline.from('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0 }, 'itinAnim');
-    itinTimeline.from('#Rectangle-2, #BookNow', 0.5, { opacity: 0, ease: Power1.easeIn, y: 100 }, 'itinAnim');
-    itinTimeline.from('#Rectangle-2', 0.25, { filter: "url(#dropshadow)"});
-    itinTimeline.to('#Rectangle-2', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
-    itinTimeline.to('#Rectangle-2', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
-    itinTimeline.staggerTo('#Group-7, #Group-5, #Group-4, #Group-5-Copy', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2.2');
-    itinTimeline.to('#itinerary-path-7, #Line-Copy-3, #itinerary-path-22, #Line-Copy-4, .itinerary-date', 1, { opacity: 0 }, 'itinAnim+=2.2');
-    itinTimeline.to('#Rectangle-2, #BookNow', 1, { opacity: 0, backgroundColor: "#00FFFF", ease: Power1.easeOut, y: 300 }, 'itinAnim+=2.2');
     
-
+    // iPhone animation
     masterTimeline.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
     masterTimeline.staggerFrom('.phone-mock-text', 0.5, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.05);
     masterTimeline.to('#iPhone', 1, { opacity: 0, ease: Power1.easeOut, x: 700 }, '+=1');
-    masterTimeline.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 }, '+=3.8');
+
+    // Itinerary 1 animation
+    masterTimeline.from('#itinerary-1 .mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itinAnim')
+    masterTimeline.from('.itinerary-1-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itinAnim');
+    masterTimeline.from('.itinerary-1-card', 1, { opacity: 0 }, 'itinAnim');
+    masterTimeline.from('#itinerary-1 #Button-1', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itinAnim');
+    masterTimeline.from('#itinerary-1 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)"});
+    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
+    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
+    masterTimeline.staggerTo('.itinerary-1-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2.2');
+    masterTimeline.to('.itinerary-1-date', 1, { opacity: 0 }, 'itinAnim+=2.2');
+    masterTimeline.to('#itinerary-1 #Button-1', 1, { opacity: 0, backgroundColor: "#00FFFF", y: 500, ease: Power1.easeOut }, 'itinAnim+=2.2');
+
+    // Slack animation
+    masterTimeline.from('#slack', 0.7, { opacity: 0, ease: Power1.easeIn, y: 400 });
     masterTimeline.staggerFrom('.slack-mock-text', 0.3, { opacity: 0, width: 0, ease: Power1.easeOut }, 0.02);    
-    masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, '+=1.3');  
-    masterTimeline.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 }, '+=3.8');
+    masterTimeline.to('#slack', 1, { opacity: 0, ease: Power1.easeOut, x: 300 });
+    
+    // Itinerary 2 animation
+    masterTimeline.from('#itinerary-2 .mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itin2Anim')
+    masterTimeline.from('.itinerary-2-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itin2Anim');
+    masterTimeline.from('.itinerary-2-card', 1, { opacity: 0 }, 'itin2Anim');
+    masterTimeline.from('#itinerary-2 #Button-2', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itin2Anim');
+    masterTimeline.from('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)"});
+    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
+    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
+    masterTimeline.staggerTo('.itinerary-2-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itin2Anim+=2.2');
+    masterTimeline.to('.itinerary-2-date', 1, { opacity: 0 }, 'itin2Anim+=2.2');
+    masterTimeline.to('#itinerary-2 #Button-2', 1, { opacity: 0, backgroundColor: "#00FFFF", y: 500, ease: Power1.easeOut }, 'itin2Anim+=2.2');
+
+    // Email animation
+    masterTimeline.from('#email', 0.5, { opacity: 0, ease: Power1.easeIn, y: 300 });
     masterTimeline.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn }, 0.1);
     masterTimeline.staggerFrom('.email-mock-text', 0.15, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.03);
     masterTimeline.from('#send-btn', 0.2, { opacity: 0, ease: Power1.easeIn });
     masterTimeline.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, '+=1');
-    masterTimeline.to('#quinn-delay-hack', 4.5, {opacity: 0, ease: Power1.easeOut});
+
+    // Itinerary 3 animation
+    masterTimeline.from('#itinerary-3 .mock-text', 0.2, { width: 0, ease: Power1.easeIn }, 'itin3Anim')
+    masterTimeline.from('.itinerary-3-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'iti32Anim');
+    masterTimeline.from('.itinerary-3-card', 1, { opacity: 0 }, 'itin3Anim');
+    masterTimeline.from('#itinerary-3 #Button-3', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itin3Anim');
+    masterTimeline.from('#itinerary-3 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)"});
+    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
+    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
+    masterTimeline.staggerTo('.itinerary-3-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itin3Anim+=2.2');
+    masterTimeline.to('.itinerary-3-date', 1, { opacity: 0 }, 'itin3Anim+=2.2');
+    masterTimeline.to('#itinerary-3 #Button-3', 1, { opacity: 0, backgroundColor: "#00FFFF", y: 500, ease: Power1.easeOut }, 'itin3Anim+=2.2');
 
 
 
