@@ -57,6 +57,10 @@ function startAnim() {
     masterTimeline.from('.itinerary-2-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itin2Anim');
     masterTimeline.from('.itinerary-2-card', 1, { opacity: 0 }, 'itin2Anim');
     masterTimeline.from('#itinerary-2 #Button-2', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itin2Anim');
+    masterTimeline.to('#itinerary-2 .has-error', 0.3, { opacity: 0, x: 500, ease: Power1.easeIn });
+    masterTimeline.to('#itinerary-2 .has-error .warning-stripe', 0.0, { fill: '#7ED321' });
+    masterTimeline.to('#itinerary-2 .has-error .warning-icon', 0.0, { opacity: 0 });
+    masterTimeline.to('#itinerary-2 .has-error', 0.3, { opacity: 1, x: 0, ease: Elastic.easeInOut.config(1, 0.7) });
     masterTimeline.from('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)"});
     masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.1, {filter: "url(#inset-shadow)", fill: "#3F7F9A" , ease: Power1.easeIn});
     masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.25, {filter: "url(#dropshadow)", fill: "#4C8CA7", ease: Power1.easeOut});
