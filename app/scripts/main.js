@@ -96,11 +96,7 @@ function startAnim() {
     
     
     document.getElementById('animPause').addEventListener('click', function () {
-        masterTimeline.pause();
-    });
-
-    document.getElementById('animResume').addEventListener('click', function () {
-        masterTimeline.resume();
+        masterTimeline.paused(!masterTimeline.paused());
     });
 
     document.getElementById('reverse').addEventListener('click', function () {
