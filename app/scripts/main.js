@@ -39,6 +39,9 @@ function startAnim() {
     masterTimeline.staggerFrom('#TravelAgent, #TravelReservations', 0.2, { opacity: 0, ease: Power1.easeIn }, 0.1);
     masterTimeline.staggerFrom('.email-mock-text', 0.15, { opacity: 0, width: 0, ease: Power1.easeIn }, 0.03);
     masterTimeline.from('#send-btn', 0.2, { opacity: 0, ease: Power1.easeIn });
+    masterTimeline.from('#send-btn', 0.25, { filter: "url(#dropshadow)" });
+    masterTimeline.to('#send-btn', 0.1, { filter: "url(#inset-shadow)", fill: "#3D83D5", ease: Power1.easeIn });
+    masterTimeline.to('#send-btn', 0.25, { filter: "url(#dropshadow)", fill: "#4A90E2", ease: Power1.easeOut });
     masterTimeline.to('#email', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, '+=1');
 
     // Itinerary 3 animation
