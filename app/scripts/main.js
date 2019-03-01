@@ -105,7 +105,15 @@ function startAnim() {
     });
 
     document.getElementById('slowDown').addEventListener('click', function () {
-        masterTimeline.timeScale(0.5)
+        masterTimeline.timeScale(0.5);
+    });
+
+    document.getElementById('regular').addEventListener('click', function() {
+        masterTimeline.timeScale(1);
+    });
+
+    document.getElementById('faster').addEventListener('click', function() {
+        masterTimeline.timeScale(1.5);
     });
 
 }
