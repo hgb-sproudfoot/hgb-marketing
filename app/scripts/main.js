@@ -100,4 +100,12 @@ function startAnim() {
         masterTimeline.resume();
     });
 
+    document.getElementById('reverse').addEventListener('click', function () {
+        masterTimeline.reversed(!masterTimeline.reversed());
+    });
+
+    document.getElementById('slowDown').addEventListener('click', function () {
+        masterTimeline.timeScale(0.5)
+    });
+
 }
