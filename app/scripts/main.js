@@ -127,17 +127,17 @@ function startAnim() {
 
     // NLP Airline
     nlpTimeline.from('#nlp-airline .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from('#nlp-airline .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'airlineHandShown');
+    nlpTimeline.from('#nlp-airline .cursor-hand', 0.5, {x: percentToPixel('#nlp-airline', 100), y: percentToPixel('#nlp-airline', 25), ease: Power1.easeOut}, 'airlineHandShown');
     nlpTimeline.to('#nlp-airline', 1, {x: percentToPixel('#nlp-airline', 100), ease: Power1.easeIn}, 'airlineHandShown+=1');
 
     // NLP Hotel
     nlpTimeline.from('#nlp-hotel .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from('#nlp-hotel .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'hotelHandShown');
+    nlpTimeline.from('#nlp-hotel .cursor-hand', 0.5, {x: percentToPixel('#nlp-hotel', 100), y: percentToPixel('#nlp-hotel', 25), ease: Power1.easeOut}, 'hotelHandShown');
     nlpTimeline.to('#nlp-hotel', 1, {x: percentToPixel('#nlp-hotel', 100), ease: Power1.easeIn}, 'hotelHandShown+=1');
 
     // NLP OTA
     nlpTimeline.from('#nlp-ota .channel-tools', 1, {opacity: 0, ease: Power1.easeOut}, 'resetAnimationPoint');
-    nlpTimeline.from('#nlp-ota .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'otaHandShown');
+    nlpTimeline.from('#nlp-ota .cursor-hand', 0.5, {x: percentToPixel('#nlp-ota', 100), y: percentToPixel('#nlp-ota', 25), ease: Power1.easeOut}, 'otaHandShown');
     nlpTimeline.to('#nlp-ota', 1, {x: percentToPixel('#nlp-ota', 100), ease: Power1.easeIn}, 'otaHandShown+=1');
 
     // Start reseting positions of first screen of timeline when NLP OTA animation begins
