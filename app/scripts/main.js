@@ -49,9 +49,9 @@ function startAnim() {
     masterTimeline.from('.itinerary-3-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itin3Anim');
     masterTimeline.from('.itinerary-3-card', 1, { opacity: 0 }, 'itin3Anim');
     masterTimeline.from('#itinerary-3 #Button-3', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itin3Anim');
-    masterTimeline.from('#itinerary-3 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)" });
-    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.1, { filter: "url(#inset-shadow)", fill: "#3F7F9A", scale: 0.99, ease: Power1.easeIn });
-    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)", fill: "#4C8CA7", scale: 1, ease: Power1.easeOut });
+    masterTimeline.from('#itinerary-3 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)' });
+    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.1, { filter: 'url(#inset-shadow)', fill: '#3F7F9A', scale: 0.99, ease: Power1.easeIn });
+    masterTimeline.to('#itinerary-3 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)', fill: '#4C8CA7', scale: 1, ease: Power1.easeOut });
     masterTimeline.staggerTo('.itinerary-3-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itin3Anim+=2.2');
     masterTimeline.to('.itinerary-3-date', 1, { opacity: 0 }, 'itin3Anim+=2.2');
     masterTimeline.to('#itinerary-3 #Button-3', 1, { opacity: 0, backgroundColor: '#00FFFF', y: 500, ease: Power1.easeOut }, 'itin3Anim+=2.2');
@@ -70,12 +70,12 @@ function startAnim() {
     masterTimeline.to('#itinerary-2 .has-error .warning-stripe', 0.0, { fill: '#7ED321' });
     masterTimeline.to('#itinerary-2 .has-error .warning-icon', 0.0, { opacity: 0 });
     masterTimeline.to('#itinerary-2 .has-error', 0.7, { opacity: 1, x: 0, ease: Elastic.easeInOut.config(1, 0.7) });
-    masterTimeline.from('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)" });
-    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.1, { filter: "url(#inset-shadow)", fill: "#3F7F9A", scale: 0.99, ease: Power1.easeIn });
-    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)", fill: "#4C8CA7", scale: 1, ease: Power1.easeOut }, "buttonPressed");
-    masterTimeline.staggerTo('.itinerary-2-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, "buttonPressed+=0.3");
-    masterTimeline.to('.itinerary-2-date', 1, { opacity: 0 }, "buttonPressed+=0.3");
-    masterTimeline.to('#itinerary-2 #Button-2', 1, { opacity: 0, backgroundColor: "#00FFFF", y: 500, ease: Power1.easeOut }, "buttonPressed+=0.3");
+    masterTimeline.from('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)' });
+    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.1, { filter: 'url(#inset-shadow)', fill: '#3F7F9A', scale: 0.99, ease: Power1.easeIn });
+    masterTimeline.to('#itinerary-2 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)', fill: '#4C8CA7', scale: 1, ease: Power1.easeOut }, 'buttonPressed');
+    masterTimeline.staggerTo('.itinerary-2-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, 'buttonPressed+=0.3');
+    masterTimeline.to('.itinerary-2-date', 1, { opacity: 0 }, 'buttonPressed+=0.3');
+    masterTimeline.to('#itinerary-2 #Button-2', 1, { opacity: 0, backgroundColor: '#00FFFF', y: 500, ease: Power1.easeOut }, 'buttonPressed+=0.3');
 
     // iPhone animation
     masterTimeline.to('#iPhone', .7, { opacity: 1, ease: Power1.easeOut, y: -700 });
@@ -87,9 +87,9 @@ function startAnim() {
     masterTimeline.from('.itinerary-1-date', 0.5, { opacity: 0, ease: Power2.easeIn, x: -200 }, 'itinAnim');
     masterTimeline.from('.itinerary-1-card', 1, { opacity: 0 }, 'itinAnim');
     masterTimeline.from('#itinerary-1 #Button-1', 0.5, { opacity: 0, y: 500, ease: Power1.easeIn }, 'itinAnim');
-    masterTimeline.from('#itinerary-1 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)" });
-    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.1, { filter: "url(#inset-shadow)", fill: "#3F7F9A", scale: 0.99, ease: Power1.easeIn });
-    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.25, { filter: "url(#dropshadow)", fill: "#4C8CA7", scale: 1, ease: Power1.easeOut });
+    masterTimeline.from('#itinerary-1 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)' });
+    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.1, { filter: 'url(#inset-shadow)', fill: '#3F7F9A', scale: 0.99, ease: Power1.easeIn });
+    masterTimeline.to('#itinerary-1 #Rounded-Rectangle', 0.25, { filter: 'url(#dropshadow)', fill: '#4C8CA7', scale: 1, ease: Power1.easeOut });
     masterTimeline.staggerTo('.itinerary-1-card', 1, { opacity: 0, ease: Power1.easeOut, x: 300 }, .05, 'itinAnim+=2.2');
     masterTimeline.to('.itinerary-1-date', 1, { opacity: 0 }, 'itinAnim+=2.2');
     masterTimeline.to('#itinerary-1 #Button-1', 1, { opacity: 0, backgroundColor: '#00FFFF', y: 500, ease: Power1.easeOut }, 'itinAnim+=2.2');
@@ -123,25 +123,25 @@ function startAnim() {
     });
 
     // Ensures first screen of animation has correct z-indexing
-    nlpTimeline.from("#nlp-airline", 0.0, {zIndex: 100});
+    nlpTimeline.from('#nlp-airline', 0.0, {zIndex: 100});
 
     // NLP Airline
-    nlpTimeline.from("#nlp-airline .channel-tools", 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from("#nlp-airline .cursor-hand", 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, "airlineHandShown");
-    nlpTimeline.to("#nlp-airline", 1, {x: percentToPixel("#nlp-airline", 100), ease: Power1.easeIn}, "airlineHandShown+=1");
+    nlpTimeline.from('#nlp-airline .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
+    nlpTimeline.from('#nlp-airline .cursor-hand', 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, 'airlineHandShown');
+    nlpTimeline.to('#nlp-airline', 1, {x: percentToPixel('#nlp-airline', 100), ease: Power1.easeIn}, 'airlineHandShown+=1');
 
     // NLP Hotel
-    nlpTimeline.from("#nlp-hotel .channel-tools", 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from("#nlp-hotel .cursor-hand", 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, "hotelHandShown");
-    nlpTimeline.to("#nlp-hotel", 1, {x: percentToPixel("#nlp-hotel", 100), ease: Power1.easeIn}, "hotelHandShown+=1");
+    nlpTimeline.from('#nlp-hotel .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
+    nlpTimeline.from('#nlp-hotel .cursor-hand', 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, 'hotelHandShown');
+    nlpTimeline.to('#nlp-hotel', 1, {x: percentToPixel('#nlp-hotel', 100), ease: Power1.easeIn}, 'hotelHandShown+=1');
 
     // NLP OTA
-    nlpTimeline.from("#nlp-ota .channel-tools", 1, {opacity: 0, ease: Power1.easeOut}, "resetAnimationPoint");
-    nlpTimeline.from("#nlp-ota .cursor-hand", 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, "otaHandShown");
-    nlpTimeline.to("#nlp-ota", 1, {x: percentToPixel("#nlp-ota", 100), ease: Power1.easeIn}, "otaHandShown+=1");
+    nlpTimeline.from('#nlp-ota .channel-tools', 1, {opacity: 0, ease: Power1.easeOut}, 'resetAnimationPoint');
+    nlpTimeline.from('#nlp-ota .cursor-hand', 0.3, {x: 1100, y: 300, ease: Power1.easeOut}, 'otaHandShown');
+    nlpTimeline.to('#nlp-ota', 1, {x: percentToPixel('#nlp-ota', 100), ease: Power1.easeIn}, 'otaHandShown+=1');
 
     // Start reseting positions of first screen of timeline when NLP OTA animation begins
-    nlpTimeline.to("#nlp-airline", 0.0, {x: 0, zIndex: 70}, "resetAnimationPoint");
-    nlpTimeline.to("#nlp-airline .channel-tools", 0.0, {opacity: 0}, "resetAnimationPoint");
+    nlpTimeline.to('#nlp-airline', 0.0, {x: 0, zIndex: 70}, 'resetAnimationPoint');
+    nlpTimeline.to('#nlp-airline .channel-tools', 0.0, {opacity: 0}, 'resetAnimationPoint');
 
 }
