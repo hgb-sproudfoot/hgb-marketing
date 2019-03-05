@@ -1,33 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var pathEls = document.querySelectorAll('svg .circuit-wire path');
-    pathEls.forEach((path, index) => {
-        var offset = anime.setDashoffset(path);
-        path.setAttribute('stroke-dashoffset', offset);
-        anime({
-            targets: path,
-            strokeDashoffset: [offset, 0],
-            duration: anime.random(500, 1000),
-            delay: anime.random(0, 100),
-            direction: 'normal',
-            easing: 'easeInOutSine',
-            autoplay: true
-        });
-    });
-})
 
-
-window.onload = startAnim();
-
-// Based on https://codepen.io/bassta/pen/bysgL
-// Converts percentage to pixel value
-// Used because greensock does not support percentage based animations
-function percentToPixel(_elem, _perc){
-    return (document.querySelector(_elem).parentElement.offsetWidth/100)* parseFloat(_perc);
-}
-
-function startAnim() {
-
-
+function startItineraryTimeline() {
     const masterTimeline = new TimelineMax({
         onComplete: function () {
             masterTimeline.restart();
@@ -114,7 +86,9 @@ function startAnim() {
     document.getElementById('faster').addEventListener('click', function() {
         masterTimeline.timeScale(1.5);
     });
+}
 
+function startNLPTimeline() {
     // NLP Timeline
     const nlpTimeline = new TimelineMax({
         onComplete: function () {
@@ -127,21 +101,72 @@ function startAnim() {
 
     // NLP Airline
     nlpTimeline.from('#nlp-airline .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from('#nlp-airline .cursor-hand', 0.5, {x: percentToPixel('#nlp-airline', 100), y: percentToPixel('#nlp-airline', 25), ease: Power1.easeOut}, 'airlineHandShown');
-    nlpTimeline.to('#nlp-airline', 1, {x: percentToPixel('#nlp-airline', 100), ease: Power1.easeIn}, 'airlineHandShown+=1');
+    nlpTimeline.from('#nlp-airline .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'airlineHandShown');
+    nlpTimeline.to('#nlp-airline', 2, {x: 4000, ease: Power1.easeIn}, 'airlineHandShown+=1.5');
 
     // NLP Hotel
     nlpTimeline.from('#nlp-hotel .channel-tools', 1, {opacity: 0, ease: Power1.easeOut});
-    nlpTimeline.from('#nlp-hotel .cursor-hand', 0.5, {x: percentToPixel('#nlp-hotel', 100), y: percentToPixel('#nlp-hotel', 25), ease: Power1.easeOut}, 'hotelHandShown');
-    nlpTimeline.to('#nlp-hotel', 1, {x: percentToPixel('#nlp-hotel', 100), ease: Power1.easeIn}, 'hotelHandShown+=1');
+    nlpTimeline.from('#nlp-hotel .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'hotelHandShown');
+    nlpTimeline.to('#nlp-hotel', 2, {x: 4000, ease: Power1.easeIn}, 'hotelHandShown+=1.5');
 
     // NLP OTA
     nlpTimeline.from('#nlp-ota .channel-tools', 1, {opacity: 0, ease: Power1.easeOut}, 'resetAnimationPoint');
-    nlpTimeline.from('#nlp-ota .cursor-hand', 0.5, {x: percentToPixel('#nlp-ota', 100), y: percentToPixel('#nlp-ota', 25), ease: Power1.easeOut}, 'otaHandShown');
-    nlpTimeline.to('#nlp-ota', 1, {x: percentToPixel('#nlp-ota', 100), ease: Power1.easeIn}, 'otaHandShown+=1');
+    nlpTimeline.from('#nlp-ota .cursor-hand', 0.5, {x: 1100, y: 300, ease: Power1.easeOut}, 'otaHandShown');
+    nlpTimeline.to('#nlp-ota', 2, {x: 4000, ease: Power1.easeIn}, 'otaHandShown+=1.5');
 
     // Start reseting positions of first screen of timeline when NLP OTA animation begins
     nlpTimeline.to('#nlp-airline', 0.0, {x: 0, zIndex: 70}, 'resetAnimationPoint');
     nlpTimeline.to('#nlp-airline .channel-tools', 0.0, {opacity: 0}, 'resetAnimationPoint');
-
 }
+
+var ball   = document.querySelector('.ball');
+var garden = document.querySelector('.garden');
+var output = document.querySelector('.output');
+
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
+
+function handleOrientation(event) {
+  var x = event.beta;  // In degree in the range [-180,180]
+  var y = event.gamma; // In degree in the range [-90,90]
+
+  output.innerHTML  = 'beta : ' + x + '\n';
+  output.innerHTML += 'gamma: ' + y + '\n';
+
+  // Because we don't want to have the device upside down
+  // We constrain the x value to the range [-90,90]
+  if (x >  90) { x =  90};
+  if (x < -90) { x = -90};
+
+  // To make computation easier we shift the range of 
+  // x and y to [0,180]
+  x += 90;
+  y += 90;
+
+  // 10 is half the size of the ball
+  // It center the positioning point to the center of the ball
+  ball.style.top  = (maxX*x/180 - 10) + 'px';
+  ball.style.left = (maxY*y/180 - 10) + 'px';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var pathEls = document.querySelectorAll('svg .circuit-wire path');
+    pathEls.forEach((path, index) => {
+        var offset = anime.setDashoffset(path);
+        path.setAttribute('stroke-dashoffset', offset);
+        anime({
+            targets: path,
+            strokeDashoffset: [offset, 0],
+            duration: anime.random(500, 1000),
+            delay: anime.random(0, 100),
+            direction: 'normal',
+            easing: 'easeInOutSine',
+            autoplay: true
+        });
+    });
+
+    startItineraryTimeline();
+    startNLPTimeline();
+});
+
+window.addEventListener('deviceorientation', handleOrientation);
