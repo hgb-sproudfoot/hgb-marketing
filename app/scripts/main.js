@@ -128,16 +128,12 @@ function startNLPTimeline() {
     nlpTimeline.to('#nlp-airline .channel-tools', 0.0, {opacity: 0}, 'resetAnimationPoint');
     nlpTimeline.to('#nlp-airline .nlp-box', 0.0, {opacity: 0}, 'resetAnimationPoint');
 }
-
-var ball   = document.querySelector('.ball');
-var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
-
-var maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
   var y = event.gamma; // In degree in the range [-90,90]
   var yPercentage = (y/90) * 50 + 50;
+  output.innerHTML = yPercentage;
   document.documentElement.style.setProperty('--backgroundXPosition', `${yPercentage}%`);
 }
 
