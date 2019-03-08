@@ -128,13 +128,34 @@ function startNLPTimeline() {
     nlpTimeline.to('#nlp-airline .channel-tools', 0.0, {opacity: 0}, 'resetAnimationPoint');
     nlpTimeline.to('#nlp-airline .nlp-box', 0.0, {opacity: 0}, 'resetAnimationPoint');
 }
+
+
 var output = document.querySelector('.output');
+var isTouching = document.querySelector('.is-touching');
+var fourthHero = document.querySelector('.fourth-hero');
+var touchPosition = document.querySelector('.touch-position');
+window.USER_IS_TOUCHING = false;
 
 function handleOrientation(event) {
-  var y = event.gamma; // In degree in the range [-90,90]
-  var yPercentage = (y/90) * 50 + 50;
-  output.innerHTML = yPercentage;
-  document.documentElement.style.setProperty('--backgroundXPosition', `${yPercentage}%`);
+    if(window.USER_IS_TOUCHING) { return }
+    var y = event.gamma; // In degree in the range [-90,90]
+    var yPercentage = (y/90) * 50 + 50;
+    document.documentElement.style.setProperty('--backgroundXPosition', `${yPercentage}%`);
+}
+
+function toggleGyroscope(event) {
+    window.USER_IS_TOUCHING = !window.USER_IS_TOUCHING;
+}
+
+function handleHeroMove(event) {
+    if (event.targetTouches.length > 1) { return }
+
+    if (event.targetTouches.length == 1) {
+        var touch = event.targetTouches[0];
+        // Place element where the finger is
+        var touchPositionPercentage = Math.floor((touch.pageX/event.target.offsetWidth) * 100);
+        document.documentElement.style.setProperty('--backgroundXPosition', `${touchPositionPercentage}%`);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -158,3 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('deviceorientation', handleOrientation);
+fourthHero.addEventListener('touchstart', toggleGyroscope);
+fourthHero.addEventListener('touchmove', handleHeroMove);
+fourthHero.addEventListener('touchend', toggleGyroscope);
