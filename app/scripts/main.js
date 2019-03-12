@@ -129,13 +129,6 @@ function startNLPTimeline() {
     nlpTimeline.to('#nlp-airline .nlp-box', 0.0, {opacity: 0}, 'resetAnimationPoint');
 }
 
-
-var output = document.querySelector('.output');
-var isTouching = document.querySelector('.is-touching');
-var fourthHero = document.querySelector('.fourth-hero');
-var touchPosition = document.querySelector('.touch-position');
-window.USER_IS_TOUCHING = false;
-
 function handleOrientation(event) {
     if(window.USER_IS_TOUCHING) { return }
     var y = event.gamma; // In degree in the range [-90,90]
@@ -154,12 +147,19 @@ function handleHeroMove(event) {
         var touch = event.targetTouches[0];
         // Place element where the finger is
         var touchPositionPercentage = Math.floor((touch.pageX/event.target.offsetWidth) * 100);
-        document.documentElement.style.setProperty('--backgroundXPosition', `${touchPositionPercentage}%`);
+        var reversedPositionPercentage = 100 - touchPositionPercentage;
+        document.documentElement.style.setProperty('--backgroundXPosition', `${reversedPositionPercentage}%`);
     }
 }
 
+var output = document.querySelector('.output');
+var isTouching = document.querySelector('.is-touching');
+var fourthHero = document.querySelector('.fourth-hero');
+var touchPosition = document.querySelector('.touch-position');
+window.USER_IS_TOUCHING = false;
+
 document.addEventListener('DOMContentLoaded', function() {
-    var pathEls = document.querySelectorAll('svg .circuit-wire path');
+    var pathEls = document.querySelectorAll('svg .circuit-wire');
     pathEls.forEach((path, index) => {
         var offset = anime.setDashoffset(path);
         path.setAttribute('stroke-dashoffset', offset);
